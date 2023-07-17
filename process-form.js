@@ -15,7 +15,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      to: 'LNAdmin@lazynotch.com',
+      to: 'lnadmin@lazynotch.com',
       subject: 'New Form Submission',
       body: JSON.stringify(formObject),
     }),
