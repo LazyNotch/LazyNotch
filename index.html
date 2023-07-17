@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="javascript" type="text/js" href="js/javascript.js">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<title>LazyNotch</title>
+	<script src="process-form.js" defer></script>
 	<link rel="icon" type="image/png" href="img/SlothNewLogo.png" />
 </head>
 <body>
@@ -160,46 +162,44 @@
 	</div>
 
 	<div class="body7 banner1"> 
-	  <div class="form">
-	    <div class="title">Connect With LazyNotch</div>
-	    <div class="subtitle">You can ask, suggest, complain, or share your ideas with us. We are always open to new ideas.</div>
-	    <form method="POST" action="process-form.php">
-	      <div class="input-container ic1">
-	        <input id="firstname" name="firstname" class="input" type="text" placeholder=" " required />
-	        <div class="cut"></div>
-	        <label for="firstname" class="placeholder">First name</label>
-	      </div>
-	      <div class="input-container ic2">
-	        <input id="lastname" name="lastname" class="input" type="text" placeholder=" " required />
-	        <div class="cut"></div>
-	        <label for="lastname" class="placeholder">Last name</label>
-	      </div>
-	      <div class="input-container ic2">
-	        <input id="email" name="email" class="input" type="text" placeholder=" " required />
-	        <div class="cut cut-short"></div>
-	        <label for="email" class="placeholder">Email</label>
-	      </div>
-	      <div class="input-container ic2">
-	        <select id="topic" name="topic" class="input" required>
-	          <option value="" disabled selected>Select a topic</option>
-	          <option value="suggestion">Suggestion</option>
-	          <option value="complaint">Complaint</option>
-	          <option value="enquiry">Enquiry</option>
-	        </select>
-	        <div class="cut"></div>
-	        <label for="topic" class="placeholder">Topic</label>
-	      </div>
-	      <div class="input-container1 ic2">
-	        <textarea id="message" name="message" class="input" placeholder=" " required></textarea>
-	        <div class="cut"></div>
-	        <label for="message" class="placeholder">Message</label>
-	      </div>
-	      <button type="submit" class="submit">Submit</button>
-	    </form>
-	  </div>
-	</div>
-
-
+    <div class="form">
+      <div class="title">Connect With LazyNotch</div>
+      <div class="subtitle">You can ask, suggest, complain, or share your ideas with us. We are always open to new ideas.</div>
+      <form id="contactForm">
+        <div class="input-container ic1">
+          <input id="firstname" name="firstname" class="input" type="text" placeholder=" " required />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" name="lastname" class="input" type="text" placeholder=" " required />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" name="email" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="email" class="placeholder">Email</label>
+        </div>
+        <div class="input-container ic2">
+          <select id="topic" name="topic" class="input" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="complaint">Complaint</option>
+            <option value="enquiry">Enquiry</option>
+          </select>
+          <div class="cut"></div>
+          <label for="topic" class="placeholder">Topic</label>
+        </div>
+        <div class="input-container1 ic2">
+          <textarea id="message" name="message" class="input" placeholder=" " required></textarea>
+          <div class="cut"></div>
+          <label for="message" class="placeholder">Message</label>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
 </div>
 <script src="js/script.js"></script>
