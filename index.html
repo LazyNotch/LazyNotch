@@ -2,14 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="javascript" type="text/js" href="js/javascript.js">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<title>LazyNotch</title>
-	<script src="process-form.js" defer></script>
 	<link rel="icon" type="image/png" href="img/SlothNewLogo.png" />
+	<script src="https://cdn.emailjs.com/sdk/2.5.0/email.min.js"></script>
+	<script>
+	  (function () {
+	    emailjs.init('TeRZv-fNbVkRlg9zJ'); // Replace YOUR_USER_ID with your EmailJS user ID
+	  })();
+	</script>
 </head>
 <body>
 
@@ -204,5 +209,30 @@
 </div>
 <script src="js/script.js"></script>
 <script src="https://kit.fontawesome.com/d59db078d3.js" crossorigin="anonymous"></script>
+
+<script>
+  // Get the form element
+  const form = document.getElementById('contactForm');
+
+  // Add an event listener to the form's submit event
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the form data
+    const formData = new FormData(this);
+
+    // Send the email using EmailJS
+    emailjs.send('service_e5sf5ii', 'template_zjsa5pt', formData)
+      .then(function (response) {
+        // Display a success message
+        alert('Email sent successfully.');
+        // Reset the form
+        form.reset();
+      }, function (error) {
+        // Display an error message
+        alert('Email sending failed. Please try again.');
+      });
+  });
+</script>
 </body>
 </html>
